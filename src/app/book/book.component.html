@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-12">
+    <div class="alert alert-success" role="alert">
+      Selected books: {{values}}
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="row">
+          <ngx-dropdown-treeview [config]="config" [items]="items" [buttonClass]="buttonClass"
+            (selectedChange)="values = $event" [disabled]="!dropdownEnabled"
+            [ngxDisabledOnSelector]="'button.dropdown-toggle'" (filterChange)="onFilterChange($event)">
+          </ngx-dropdown-treeview>
+        </div>
+      </div>
+    </div>
+
